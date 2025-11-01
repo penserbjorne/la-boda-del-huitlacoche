@@ -1780,8 +1780,9 @@ fieldset[disabled] .btn.ribbon:hover {
 
 .hero-subtitle {
     color: #fff;
-    font-size: 62pt;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 40pt;
+    /*font-family: 'Open Sans Condensed', sans-serif;*/
+    font-family: 'Dancing Script', cursive;
     min-height: 55px;
     text-transform: uppercase;
     margin-top: 68px
