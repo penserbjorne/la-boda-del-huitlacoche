@@ -56,10 +56,10 @@ body {
     height: 100%;
     color: #73777b;
     overflow: hidden;
-    line-height: 20px;
+    line-height: 22px;
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px
+    font-size: 22px
 }
 
 ::selection {
@@ -2364,7 +2364,7 @@ fieldset[disabled] .btn.ribbon:hover {
 
 .timeline .event_left .event_panel p,
 .timeline .event_right .event_panel p {
-    font-size: 10pt;
+    font-size: 16pt;
     color: #adb1b5;
     -webkit-transition: color .3s;
     -moz-transition: color .3s;
