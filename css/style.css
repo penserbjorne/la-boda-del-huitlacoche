@@ -2137,7 +2137,8 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .quote-fullwidth {
-    background-image: url(../images/quote-img.jpg);
+    /*background-image: url(../images/quote-img.jpg);*/
+    background-image: url(../images/quote/propuestaversailles-156.jpg);
     font-size: 38pt;
     line-height: 38pt;
     padding: 100px 0;
