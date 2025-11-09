@@ -1142,6 +1142,7 @@
                     }
                 });
             */
+           
             reset: function(option) {
                 $.extend(setting, option);
                 return this;
