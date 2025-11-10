@@ -4669,7 +4669,7 @@ textarea.form-control {
 }
 
 #footer {
-    text-align: left;
+    text-align: center;
     padding: 20px 0;
     font-size: 10pt;
     border-top: 1px solid rgba(173, 159, 179, .5);
@@ -4688,7 +4688,6 @@ textarea.form-control {
 }
 
 #footer p {
-    float: left;
     padding-top: 19px
 }
 
