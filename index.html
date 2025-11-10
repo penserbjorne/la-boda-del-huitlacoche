@@ -651,6 +651,17 @@
 			Lilac.countdown(".countdown", "2026/02/28 4:00 PM");
 		});
 	</script>
+
+	<script>
+		// Esperar a que la página cargue completamente
+		window.onload = function() {
+			// Esperar 10 segundos (10,000 milisegundos)
+			setTimeout(function() {
+				// Desplazarse suavemente a la sección con id="contacto"
+				document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+			}, 3000);
+		};
+	</script>
 </body>
 
 </html>
