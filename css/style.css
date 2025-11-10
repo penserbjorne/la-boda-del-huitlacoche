@@ -2823,15 +2823,14 @@ fieldset[disabled] .btn.ribbon:hover {
     width: 28%;
     float: left;
     padding-top: 8px;
-    padding-right: 18px
 }
 
 .location-info .event_left .event_panel .info-right,
 .location-info .event_right .event_panel .info-right {
+    text-align: center;
     width: 72%;
     float: left;
     border-left: 1px solid rgba(173, 177, 181, .5);
-    padding-left: 18px
 }
 
 .location-info .event_left .event_panel .info-right p,
