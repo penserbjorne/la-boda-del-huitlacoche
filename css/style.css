@@ -2615,7 +2615,7 @@ fieldset[disabled] .btn.ribbon:hover {
     line-height: 1;
     text-transform: uppercase;
     padding-right: 48px;
-    width: 43%;
+    width: 50%;
     float: left;
     display: block
 }
@@ -2635,10 +2635,11 @@ fieldset[disabled] .btn.ribbon:hover {
 }
 
 .invite .invite_info {
-    width: 57%;
+    width: 50%;
     float: left;
     display: block;
     padding-left: 48px;
+    padding-top: 12.5%;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 40pt;
     line-height: 1;
