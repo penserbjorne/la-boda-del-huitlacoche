@@ -11,12 +11,6 @@ var Lilac;
             sendingMail: !1,
             mobileMenuTitle: mobileMenuTitle,
             hero100PercentHeight: hero100PercentHeight,
-            map_canvas_id: map_canvas_id,
-            map_color: map_color,
-            map_initial_zoom: map_initial_zoom,
-            map_initial_latitude: map_initial_latitude,
-            map_initial_longitude: map_initial_longitude,
-            use_default_map_style: use_default_map_style,
             contact_form_success_msg: contact_form_success_msg,
             contact_form_error_msg: contact_form_error_msg,
             c_days: c_days,
@@ -30,7 +24,7 @@ var Lilac;
             },
             build: function () {
                 var e = this;
-                e.isMobile(), e.wtcheck(), e.preloader(), e.navigation(), e.createMobileMenu(), e.heroHeight(), e.curvedText(), p("input, textarea").placeholder(), e.bgImageGrid(), e.googleMap(), e.createPrettyPhoto(), e.createOwlSliders(), e.createGallery(), e.countdown(), e.parallaxItems(), e.startNiceScroll()
+                e.isMobile(), e.wtcheck(), e.preloader(), e.navigation(), e.createMobileMenu(), e.heroHeight(), e.curvedText(), p("input, textarea").placeholder(), e.bgImageGrid(), e.createPrettyPhoto(), e.createOwlSliders(), e.createGallery(), e.countdown(), e.parallaxItems(), e.startNiceScroll()
             },
             events: function () {
                 var e = this;
@@ -133,114 +127,6 @@ var Lilac;
                         e.fitWidth()
                     }
                 }), e.fitWidth())
-            },
-            googleMap: function () {
-                if (0 === p("#map_canvas").length || "undefined" === map_markers || 0 === map_markers.length) return !1;
-                var e, s, t, a = this,
-                    i = [],
-                    o = 0;
-                for (/^\d|\.|-$/.test(a.map_initial_latitude) && /^\d|\.|-$/.test(map_initial_longitude) || (a.map_initial_latitude = map_markers[0].latitude, a.map_initial_longitude = map_markers[0].longitude), e = new google.maps.LatLng(a.map_initial_latitude, a.map_initial_longitude), this.use_default_map_style || (i = [{
-                        stylers: [{
-                            hue: map_color
-                        }, {
-                            saturation: -75
-                        }, {
-                            lightness: 5
-                        }]
-                    }, {
-                        featureType: "administrative",
-                        elementType: "labels.text.fill",
-                        stylers: [{
-                            saturation: 20
-                        }, {
-                            lightness: -70
-                        }]
-                    }, {
-                        featureType: "water",
-                        elementType: "geometry",
-                        stylers: [{
-                            saturation: -50
-                        }, {
-                            lightness: 40
-                        }]
-                    }, {
-                        featureType: "road",
-                        elementType: "geometry",
-                        stylers: [{
-                            hue: map_color
-                        }, {
-                            saturation: -100
-                        }, {
-                            lightness: 0
-                        }]
-                    }, {
-                        featureType: "road.highway",
-                        elementType: "geometry",
-                        stylers: [{
-                            hue: map_color
-                        }, {
-                            saturation: 5
-                        }, {
-                            lightness: 5
-                        }]
-                    }, {
-                        featureType: "road",
-                        elementType: "geometry.stroke",
-                        stylers: [{
-                            saturation: 10
-                        }, {
-                            lightness: 0
-                        }]
-                    }, {
-                        featureType: "road.highway",
-                        elementType: "geometry.stroke",
-                        stylers: [{
-                            saturation: 0
-                        }, {
-                            lightness: 20
-                        }]
-                    }, {
-                        featureType: "transit",
-                        elementType: "geometry",
-                        stylers: [{
-                            hue: map_color
-                        }, {
-                            saturation: 30
-                        }, {
-                            lightness: -30
-                        }]
-                    }]), i = new google.maps.StyledMapType(i, {
-                        name: "Lilac"
-                    }), e = {
-                        center: e,
-                        zoom: a.map_initial_zoom,
-                        scrollwheel: !1,
-                        panControl: !1,
-                        mapTypeControl: !1,
-                        zoomControl: !0,
-                        zoomControlOptions: {
-                            position: google.maps.ControlPosition.RIGHT_CENTER
-                        }
-                    }, (s = new google.maps.Map(document.getElementById(a.map_canvas_id), e)).mapTypes.set("map_style", i), s.setMapTypeId("map_style"), t = function (e) {
-                        var t = e.latitude,
-                            a = e.longitude,
-                            i = e.icon,
-                            e = e.infoWindow,
-                            o = new google.maps.InfoWindow({
-                                content: '<div class="infoWindow">' + e + "</div>"
-                            }),
-                            n = new RichMarker({
-                                position: new google.maps.LatLng(t, a),
-                                map: s,
-                                anchor: 8,
-                                anchorPoint: new google.maps.Point(0, -40),
-                                shadow: "none",
-                                content: '<div class="marker"><i class="fa ' + i + '"></i></div>'
-                            });
-                        google.maps.event.addListener(n, "click", function () {
-                            o.open(s, n)
-                        })
-                    }; o < map_markers.length;) t(map_markers[o]), o += 1
             },
             createPrettyPhoto: function () {
                 p("a[data-gal^='prettyPhoto']").prettyPhoto({
