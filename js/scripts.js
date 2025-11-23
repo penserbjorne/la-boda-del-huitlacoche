@@ -243,50 +243,6 @@ var Lilac;
                         })
                     }; o < map_markers.length;) t(map_markers[o]), o += 1
             },
-            getLatestTweets: function () {
-                p(".tweet").html('<div class="heartbeat"></div>');
-                var e = document.createElement("div");
-                e.setAttribute("id", "twitter-box"), p("body").append(e), p("#twitter-box").css({
-                    display: "none"
-                });
-                try {
-                    p("#twitter-box").tweet({
-                        username: this.twitter_username,
-                        modpath: "twitter/",
-                        count: 8,
-                        loading_text: "Loading tweets...",
-                        template: '<h3>{screen_name}</h3><div class="info"><a href="http://twitter.com/{screen_name}" target="_blank">@{screen_name}</a> | <a href="http://twitter.com/{screen_name}/statuses/{tweet_id}/" target="_blank" class="time">{tweet_relative_time}</a></div><div>{text}</div>'
-                    })
-                } catch (e) {
-                    console.log("Your twitter account is misconfigured. " + e)
-                }
-                var t = 0,
-                    a = p(".tweet").length;
-                p("#twitter-box li").each(function () {
-                    return t < a && (p(".tweet").eq(t).html(p(this).html()), void(t += 1))
-                }), p("#twitter-box").remove()
-            },
-            getInstagram: function () {
-                var l = this;
-                p(".instagram").html('<div class="heartbeat"></div>'), p.ajax({
-                    type: "post",
-                    url: "instagram/instagram.php",
-                    contentType: "application/json",
-                    dataType: "json",
-                    success: function (e) {
-                        var t, a, i = e,
-                            o = p(".instagram").length,
-                            n = 0,
-                            s = 0,
-                            r = 0;
-                        for ("" !== i && i.hasOwnProperty("data") && (s = i.data.length); r < s;) n < o && (a = "caption" in (t = JSON.parse(i.data[r])) ? t.caption : "", p(".instagram").eq(n).html('<img src="' + t.media_url + '" alt="" /><span><a href="' + t.permalink + '" data-gal="prettyPhoto[gallery]" title="' + a + '"><i class="fa fa-link"></i></a><a href="' + t.permalink + '" target="_blank" title="View on Instagram"><i class="fa fa-external-link"></i></a></span>'), n += 1), r += 1;
-                        l.createPrettyPhoto()
-                    },
-                    error: function () {
-                        console.log("Error getting Instagram feed.")
-                    }
-                })
-            },
             createPrettyPhoto: function () {
                 p("a[data-gal^='prettyPhoto']").prettyPhoto({
                     theme: "lilac",
