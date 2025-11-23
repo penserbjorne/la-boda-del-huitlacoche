@@ -5335,9 +5335,7 @@ div.lilac #pp_full_res .pp_inline {
         width: 100%;
         border-right: none
     }
-}
 
-@media (max-width:992px) {
     .nav {
         display: none
     }
@@ -5345,7 +5343,9 @@ div.lilac #pp_full_res .pp_inline {
     #nav-mobile-btn {
         display: block
     }
+}
 
+@media (max-width:992px) {
     .hero-title {
         font-size: 60pt;
         margin-bottom: 50px
