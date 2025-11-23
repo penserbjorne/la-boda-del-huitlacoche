@@ -11,7 +11,6 @@ var Lilac;
             sendingMail: !1,
             mobileMenuTitle: mobileMenuTitle,
             hero100PercentHeight: hero100PercentHeight,
-            twitter_username: twitter_username,
             map_canvas_id: map_canvas_id,
             map_color: map_color,
             map_initial_zoom: map_initial_zoom,
@@ -31,7 +30,7 @@ var Lilac;
             },
             build: function () {
                 var e = this;
-                e.isMobile(), e.wtcheck(), e.preloader(), e.navigation(), e.createMobileMenu(), e.heroHeight(), e.curvedText(), p("input, textarea").placeholder(), e.bgImageGrid(), e.googleMap(), e.getLatestTweets(), e.getInstagram(), e.createPrettyPhoto(), e.createOwlSliders(), e.createGallery(), e.countdown(), e.parallaxItems(), e.startNiceScroll()
+                e.isMobile(), e.wtcheck(), e.preloader(), e.navigation(), e.createMobileMenu(), e.heroHeight(), e.curvedText(), p("input, textarea").placeholder(), e.bgImageGrid(), e.googleMap(), e.createPrettyPhoto(), e.createOwlSliders(), e.createGallery(), e.countdown(), e.parallaxItems(), e.startNiceScroll()
             },
             events: function () {
                 var e = this;
