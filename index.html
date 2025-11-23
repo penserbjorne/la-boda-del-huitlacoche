@@ -659,28 +659,11 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function () {
-			/**
-			 * Initiate countdown
-			 * Usage: Lilac.countdown("COUNTDOWN CONTAINER", "DATE");
-			 * You can change the countdowns labels in the file variables.js
-			 */
 			Lilac.countdown(".countdown", "2026/02/28 4:00 PM");
 		});
 	</script>
 
-	<script>
-		// Esperar a que la página cargue completamente
-		window.onload = function() {
-			// Esperar 10 segundos (10,000 milisegundos)
-			setTimeout(function() {
-				// Desplazarse suavemente a la sección con id="contacto"
-				document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-			}, 3000);
-		};
-	</script>
-
-		<!-- Leaflet -->
-	 
+	<!-- Leaflet -->
 	<script
 		src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -723,6 +706,18 @@
 
 		// Ajustar el zoom para que se vean todos los marcadores
 		map.fitBounds(group.getBounds(), { padding: [20, 20] });
+	</script>
+
+	<script>
+		// Esperar a que la página cargue completamente
+		window.onload = function() {
+			// Esperar 10 segundos (10,000 milisegundos)
+			setTimeout(function() {
+				// Desplazarse suavemente a la sección con id="contacto"
+				document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+			}, 3000);
+
+		};
 	</script>
 
 </body>
